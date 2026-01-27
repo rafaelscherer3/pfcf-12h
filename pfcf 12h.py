@@ -113,6 +113,149 @@
 #    t = t-1
 
 #print ('fim')
-for abc in range (3):
-    for def in range (1-9):
-    print (abc)
+#linhas = int (input ('quantas linhas? '))
+#colunas = int (input ('quantas colunas? '))
+#simbulo = input ('qual simbulo? ')
+
+#or abc in range (linhas):
+#    for abc in range (colunas):
+#        print (simbulo, end=' ')
+#    print ()
+    
+        
+#print ('fim do programa')
+   
+
+#frutas = {'maçã', 'banana', 'laranja', 'uva', 'pera', 'banana'}
+#for fruta in frutas: 
+#print (frutas)
+
+#comidas = []
+#precos = [] 
+#total = ()
+##while True:
+#    comida = input ('qual comida ira comprar? (aperte q para sair) ')
+#    if comida.lower() == 'q':
+#        break 
+#    else: 
+#        preco = float (input (f'qual o preço da {comida}? '))
+#        comidas.append (comida)
+#        precos.append (preco)#
+
+#for comida in comidas: 
+#    print (f' voce comprou: {comida}')
+
+#total = sum (precos)#
+#print (f' o total gasto foi {total:.2f}')
+#print ('fim do programa')
+
+#vegetais = ('cenoura', 'batata', 'alface', 'tomate' )
+#frutas = ('maçã', 'banana', 'laranja', 'uva' )
+#carnes = ('frango', 'carne bovina', 'porco' )
+
+#comidas = [vegetais, frutas, carnes ]
+
+#print (comidas)
+#digitos = ((1,2,3),
+#            (4,5,6),
+#            (7,8,9),
+#            ('#',0,'*'))
+
+#for linha in digitos: 
+#    for numero in linha: 
+#        print (numero, end=' ')      
+#    print ()     
+#---------------------------------------------------------------------------------------------
+#perguntas = ('quantos elementos tem na tabela periodica? ',
+#              'qual o maior planeta do sistema solar? ',
+#              'qual a capital da frança? ',
+#              'qual o elemento quimico representado por O? ',
+#              'quem escreveu dom casmurro? ')#
+#opcoes = (('A:1', 'B:2', 'C:correto', 'D:4' ),
+         # ( 'a','b', 'c', 'd' ),
+#          ('A:mercurio', 'B:venus', 'C:jupiter', 'D:terra' ),
+#          ('A:paris', 'B:roma', 'C:londres', 'D:madri' ),
+#          ('A:hidrogenio', 'B:oxigenio', 'C:nitrogenio', 'D:sodio' ),
+#          ('A:machado de assis', 'B:jorge amado', 'C:joao guimaraes rosa', 'D:maria quiteria' )) 
+
+#respostas = ('c', 'c', 'a', 'b', 'a')
+#chutes = []
+#pontuacao = 0
+#numero_da_questao = 0
+
+
+#for pergunta in perguntas:
+#    print ('-------------------------------')
+#    print (pergunta)
+#    for opcao in opcoes [numero_da_questao]:
+#        print (opcao)
+#    chute = input ('sua resposta: ').lower()
+#    chutes.append (chute)
+#    if chute == respostas [numero_da_questao]:
+#        pontuacao += 1
+#        print ('correto!')
+#    else: 
+#        print ('incorreto!')
+#        print (f'a resposta correta é {respostas [numero_da_questao ]}')#
+#    numero_da_questao += 1
+
+#print ('-------------------------------')
+#print ('resultados: ')
+#print ('-------------------------------')
+#print ('respostas: ', end='') 
+#for resposta in respostas:
+#    print (resposta, end=' ')
+#print ()
+
+#print ('chutes: ', end='') 
+#for chute in chutes:
+#    print (chute, end=' ')
+#print ()
+
+#pontuacao = pontuacao / len(perguntas) * 100
+#print (f'sua pontuação foi de {pontuacao} %')
+#---------------------------------------------------------------------------------------------
+
+
+#menu = {'1-a': 8.00,
+#        '2-b': 20.00,
+#        '3-c': 4.00,
+#        '4-d': 6.00,   
+#        '5-e': 7.00}
+
+#pedido = []
+#total = 0
+
+#for item, valor in menu.items():
+#    print (f' {item:15}: R$ {valor:.2f}')
+
+#while True:
+#    comida = input ('o que deseja? (aperte q para sair): ')
+#    if comida.lower() == 'q':
+#        break
+#    elif menu.get(comida) is not None:
+#        pedido.append (comida)
+
+#for comida in pedido: 
+#    total = total + menu.get(comida)
+#    print (comida, end=', ')
+#print ()
+#print (f'o total do seu pedido é R$ {total:.2f}')
+
+import random
+
+numero = random.randint (1, 5)
+rodando = True
+while rodando:
+    tentativa = input ('deseja tentar adivinhar o numero? ')
+    tentativa = int(tentativa)
+    if tentativa == numero: 
+        break
+    elif tentativa > numero:
+        print ('muito alto')
+    elif tentativa < numero:
+        print ('muito baixo')
+    elif tentativa < 5 and tentativa > 1:
+        print ('numero invaloido')
+
+print (numero)
