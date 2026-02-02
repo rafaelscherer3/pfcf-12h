@@ -242,20 +242,51 @@
 #print ()
 #print (f'o total do seu pedido é R$ {total:.2f}')
 
-import random
+#import random
 
-numero = random.randint (1, 5)
+#numero = random.randint (1, 5)
+#rodando = True
+#chute = 0
+##print ('adivinhe um numero entre 1 e 5')
+#while rodando:
+#    tentativa = input ('deseja tentar adivinhar o numero? ')
+#    tentativa = int(tentativa)
+    
+#    chute += 1
+#    if tentativa == numero: 
+#        break
+#    elif tentativa > numero:
+#        print ('muito alto')
+#    elif tentativa < numero:
+#        print ('muito baixo')
+#    elif tentativa < 5 and tentativa > 1:
+#        print ('numero invaloido')
+
+#print (f'o numero era: {numero}')
+#print (f'numero de tentativas: {chute}')
+
+import random 
+
+opcoes = ['pedra', 'papel', 'tesoura']
 rodando = True
-while rodando:
-    tentativa = input ('deseja tentar adivinhar o numero? ')
-    tentativa = int(tentativa)
-    if tentativa == numero: 
-        break
-    elif tentativa > numero:
-        print ('muito alto')
-    elif tentativa < numero:
-        print ('muito baixo')
-    elif tentativa < 5 and tentativa > 1:
-        print ('numero invaloido')
 
-print (numero)
+while rodando:
+    pc =random.choice(opcoes)
+    tentativa = input ('escolha pedra, papel ou tesoura: ').lower()
+
+    while tentativa not in opcoes:
+        print (f'{tentativa} é uma opção invalida')
+        tentativa = input ('escolha pedra, papel ou tesoura: ').lower()
+
+    if tentativa == pc: 
+        print ( f'{tentativa} e {pc}, empate')
+        
+    elif (tentativa == 'pedra' and pc == 'tesoura') or (tentativa == 'papel' and pc == 'pedra') or (tentativa == 'tesoura' and pc == 'papel'):
+        print (f'{tentativa} e {pc}, voce ganhou')
+    else:
+        print (f'{tentativa} e {pc}, pc ganhou')
+    
+    print ('jogar novamente? s/n')
+    resposta = input ().lower()
+    if resposta == 'n':
+        rodando = False
